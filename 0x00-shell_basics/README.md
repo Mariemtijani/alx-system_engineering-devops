@@ -6,3 +6,5 @@ ls
 2- to see the path of the working dir :
 pwd
  
+3- TO back to the previous dir : 
+cd ..
