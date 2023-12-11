@@ -26,4 +26,5 @@ And hidden files (starting with .):
 
 ls -lan
 
-8- 
+8-create a symbolic link : 
+ln -s file1 fil2 
