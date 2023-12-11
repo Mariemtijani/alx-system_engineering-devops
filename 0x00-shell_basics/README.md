@@ -8,3 +8,9 @@ pwd
  
 3- TO back to the previous dir : 
 cd ..
+
+4- back to the user's home 
+cd ~
+
+5 - Display current directory contents in a long format:
+ls -l
