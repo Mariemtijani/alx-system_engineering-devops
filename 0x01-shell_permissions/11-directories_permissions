@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d -exec chmod 711 {} \
+chmod -R u=rw,g=r,o=r . && chmod -R u+x,g+x,o+x .
