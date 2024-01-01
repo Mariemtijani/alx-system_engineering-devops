@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e "C#\nC\nJavascript\nPerl\nPHP\nPHP\nASP\nR\nGo\nC#\nC++\nR\nPerl\nJavascript\nJavascript\nPython\nJavascript\nJavascript\nJavascript\nJava\nJava\nPython\nJavascript\nJavascript\nJavascript\nASP" | sort | uniq -u
+sort | uniq -u
