@@ -1,17 +1,15 @@
 #!/usr/bin/env bash
-# Installs Nginx and sets up a custom index page that says "Hello World!"
+# Installs Nginx and configures a web server to respond with "Hello World!" at its root
 
 # Exit on any error
 set -e
 
-# Update package list
+# Install Nginx (update first)
 apt-get update -y
-
-# Install nginx if not already installed
 apt-get install nginx -y
 
-# Replace default Nginx page with custom Hello World message
-echo "Hello World!" > /var/www/html/index.html
-
-# Make sure Nginx is running
+# Ensure Nginx starts (systemctl not allowed)
 service nginx start
+
+# Replace default index page with "Hello World!"
+echo 'Hello World!' > /var/www/html/index.html
