@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Installs Nginx and configures a web server to respond with "Hello World!" at its root
+# Installs Nginx and configures a web server
 
 # Exit on any error
 set -e
@@ -13,3 +13,4 @@ service nginx start
 
 # Replace default index page with "Hello World!"
 echo 'Hello World!' > /var/www/html/index.html
+
