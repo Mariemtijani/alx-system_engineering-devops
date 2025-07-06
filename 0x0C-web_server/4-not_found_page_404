@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Installs Nginx and configures a custom 404 error page
+
+set -e
+
+# Install Nginx
+apt-get update -y
+apt-get install nginx -y
+
+# Start Nginx
+service nginx start
+
+# Create the custom 404 page
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+
+# Use sed to add the error_page directive
+# This replaces the default location block and adds error_page config
+sed -i '/^\tlocation \/ {/a \ \ \ \ error_page 404 \/404.html;' /etc/nginx/sites-available/default
+
+# Reload Nginx to apply the configuration
+service nginx reload
